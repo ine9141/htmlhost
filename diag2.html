@@ -1,0 +1,10 @@
+<html><head><title>DIAG2_INIT</title></head><body><script>
+setTimeout(() => {
+  const t = document.querySelector('meta[name="finsight-preview-token"]');
+  const ta = document.querySelector('textarea#preview-message');
+  let s = 'TOKEN:' + (t ? (t.content || 'EMPTY').slice(0, 60) : 'NO');
+  s += ':TA:' + (ta ? 'Y' : 'N');
+  s += ':JOB:' + location.pathname;
+  document.title = s;
+}, 1200);
+</script></body></html>

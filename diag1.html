@@ -1,0 +1,9 @@
+<html><head><title>DIAG1_INIT</title></head><body><script>
+setTimeout(() => {
+  let b = window.analysisBridge;
+  let s = 'BRIDGE:' + (b ? (b.recoveryMode || 'no-recoveryMode') : 'UNDEFINED');
+  s += ':LOADED:' + (window.__finsightRecoveryRuntimeLoaded ? 'Y' : 'N');
+  s += ':COMPLETE:' + (window.__finsightRecoveryComplete ? 'Y' : 'N');
+  document.title = s;
+}, 1200);
+</script></body></html>
